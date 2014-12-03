@@ -1,0 +1,14 @@
+#-*- coding:utf-8 -*-
+import wodfan_models
+import Wodfan_DBSession
+user = wodfan_models('user')
+class User(user):
+    @classmethod
+    def get_users_by_ids(cls,user_ids):
+        user_ids = list(set(user_ids))
+        dbsession = Wodfan_DBSession()
+        user_list = dbsession.query(cls).filter(cls._user_id.in_(user_ids)).all()
+        dbsession.commit()
+        dbsession.close()
+if __name__ == "__main__":
+    User.get_users_by_ids(1)

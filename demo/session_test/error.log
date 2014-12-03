@@ -1,0 +1,88 @@
+ERROR:tornado.application:Uncaught exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado/http1connection.py", line 234, in _read_message
+    delegate.finish()
+  File "/usr/local/lib/python2.7/dist-packages/tornado/httpserver.py", line 282, in finish
+    self.delegate.finish()
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1884, in finish
+    self.execute()
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1904, in execute
+    **self.handler_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 180, in __init__
+    self.initialize(**kwargs)
+  File "/home/wrl/workplace/tornado/demo/session_test/test_session.py", line 14, in initialize
+    self.session = self.application.SessionHandler(self, redis, session_lifetime=30)
+  File "/home/wrl/workplace/tornado/demo/session_test/session.py", line 19, in __init__
+    self.init_session()
+  File "/home/wrl/workplace/tornado/demo/session_test/session.py", line 27, in init_session
+    if not self._redis.exists(_id):
+  File "/usr/lib/python2.7/dist-packages/redis/client.py", line 526, in exists
+    return self.execute_command('EXISTS', name)
+  File "/usr/lib/python2.7/dist-packages/redis/client.py", line 364, in execute_command
+    connection.send_command(*args)
+  File "/usr/lib/python2.7/dist-packages/redis/connection.py", line 301, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/usr/lib/python2.7/dist-packages/redis/connection.py", line 283, in send_packed_command
+    self.connect()
+  File "/usr/lib/python2.7/dist-packages/redis/connection.py", line 231, in connect
+    raise ConnectionError(self._error_message(e))
+ConnectionError: Error 111 connecting localhost:6379. Connection refused.
+ERROR:tornado.application:Uncaught exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado/http1connection.py", line 234, in _read_message
+    delegate.finish()
+  File "/usr/local/lib/python2.7/dist-packages/tornado/httpserver.py", line 282, in finish
+    self.delegate.finish()
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1884, in finish
+    self.execute()
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1904, in execute
+    **self.handler_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 180, in __init__
+    self.initialize(**kwargs)
+  File "/home/wrl/workplace/tornado/demo/session_test/test_session.py", line 14, in initialize
+    self.session = self.application.SessionHandler(self, redis, session_lifetime=30)
+  File "/home/wrl/workplace/tornado/demo/session_test/session.py", line 19, in __init__
+    self.init_session()
+  File "/home/wrl/workplace/tornado/demo/session_test/session.py", line 27, in init_session
+    if not self._redis.exists(_id):
+  File "/usr/lib/python2.7/dist-packages/redis/client.py", line 526, in exists
+    return self.execute_command('EXISTS', name)
+  File "/usr/lib/python2.7/dist-packages/redis/client.py", line 364, in execute_command
+    connection.send_command(*args)
+  File "/usr/lib/python2.7/dist-packages/redis/connection.py", line 301, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/usr/lib/python2.7/dist-packages/redis/connection.py", line 283, in send_packed_command
+    self.connect()
+  File "/usr/lib/python2.7/dist-packages/redis/connection.py", line 231, in connect
+    raise ConnectionError(self._error_message(e))
+ConnectionError: Error 111 connecting localhost:6379. Connection refused.
+WARNING:tornado.access:404 GET /favicon.ico (127.0.0.1) 0.32ms
+ERROR:tornado.application:Uncaught exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado/http1connection.py", line 234, in _read_message
+    delegate.finish()
+  File "/usr/local/lib/python2.7/dist-packages/tornado/httpserver.py", line 282, in finish
+    self.delegate.finish()
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1884, in finish
+    self.execute()
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1904, in execute
+    **self.handler_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 180, in __init__
+    self.initialize(**kwargs)
+  File "/home/wrl/workplace/tornado/demo/session_test/test_session.py", line 14, in initialize
+    self.session = self.application.SessionHandler(self, redis, session_lifetime=30)
+  File "/home/wrl/workplace/tornado/demo/session_test/session.py", line 19, in __init__
+    self.init_session()
+  File "/home/wrl/workplace/tornado/demo/session_test/session.py", line 27, in init_session
+    if not self._redis.exists(_id):
+  File "/usr/lib/python2.7/dist-packages/redis/client.py", line 526, in exists
+    return self.execute_command('EXISTS', name)
+  File "/usr/lib/python2.7/dist-packages/redis/client.py", line 364, in execute_command
+    connection.send_command(*args)
+  File "/usr/lib/python2.7/dist-packages/redis/connection.py", line 301, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/usr/lib/python2.7/dist-packages/redis/connection.py", line 283, in send_packed_command
+    self.connect()
+  File "/usr/lib/python2.7/dist-packages/redis/connection.py", line 231, in connect
+    raise ConnectionError(self._error_message(e))
+ConnectionError: Error 111 connecting localhost:6379. Connection refused.
