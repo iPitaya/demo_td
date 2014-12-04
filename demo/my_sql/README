@@ -1,0 +1,23 @@
+sqlalchemy 映射封装 动态创建类
+
+user = wodfan_models('pyach')
+class User(user):
+
+wodfan_models = generate_models_online('test',echo=False)
+
+generate_models_online = functools.partial(generate_models,MYSQL_CONFIG,MYSQL_DATABASES_TABLES) 重新绑定函数的可选参数
+
+def generate_models(mysql_config,mysql_databases_tables,database_name,echo=False,column_prefix='_'):
+
+class Models(object)
+
+def __new__
+
+cls._models[database] = _Models
+
+_table = Table(tablename,self.base.metadata,autoload=True,autoload_with=self.engine,schema=self.schema)
+_model = classobj(model_name, (self.base,), {'__table__' : _table, '__mapper_args__' : {'column_prefix' : self.column_prefix}})
+动态创建类 参数1  名字 2 继承的类  3继承类的参数
+
+主要是动态创建 sqlalchemy 表的映射对象
+
